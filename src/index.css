@@ -5,3 +5,10 @@
 body {
   padding: 60px;
 }
+
+input {
+  width: 90%;
+  padding: 8px;
+  font-size: 1rem;
+  color: #30475e;
+}

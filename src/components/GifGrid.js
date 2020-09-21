@@ -1,35 +1,21 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import GifGridItem from './GifGridItem'
-import { getGifs } from '../helpers/getGifs'
+import { useFetchGifs } from '../hooks/useFetchGifs'
 
 const GifGrid = ({category}) => {
-  const [images, setImages] = useState([])
-
-  useEffect(() => {
-    _getGifs()
-  }, [category]);
-
-  const _getGifs = async () => {
-    try {
-      const imgs = await getGifs(category)
-      setImages(imgs)
-    } catch (error) {
-      console.log('error en la peticon getGifs', error)
-    }
-  }
-
-  console.log(images)
+  const {loading, data:images} = useFetchGifs(category)
   return <>
     <h3>{category}</h3>
-    <div className='card-grid'>
+      { loading && <p>Cargando...</p> }
+      <div className='card-grid'>
         {images.map(img => (
           <GifGridItem
             key={img.id}
             {...img}
           />
         ))}
-    </div>
+      </div>
   </>
 }
 

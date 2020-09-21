@@ -13,7 +13,7 @@ const AddCategory = props => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (value.trim().length > 0) {
-      setCategories( cats => [...cats, value])
+      setCategories( cats => [value,...cats])
       setValue('')
     }
   };

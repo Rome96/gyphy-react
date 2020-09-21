@@ -3,7 +3,7 @@ import GifGrid from './components/GifGrid';
 import AddCategory from './components/AddCategory'
 
 const GifExpertApp = () => {
-  const [categories, setCategories] = useState(['naruto'])
+  const [categories, setCategories] = useState(['Goku'])
 
   // const handleAdd = () => {
   //   setCategories([

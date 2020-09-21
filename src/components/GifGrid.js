@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import PropTypes from 'prop-types'
+import GifGridItem from './GifGridItem'
 
 const GifGrid = ({category}) => {
   const [images, setImages] = useState([])
@@ -20,18 +21,19 @@ const GifGrid = ({category}) => {
       };
     })
     setImages(gifs);
-    console.log(data)
   }
 
   return (
     <>
-      {
-        images.map(img => (
-          <h3 key={img.id}>{img.title}</h3>
-        ))
-      }
+      <h3>{category}</h3>
+        {images.map(img => (
+          <GifGridItem
+            key={img.id}
+            {...img}
+          />
+        ))}
     </>
-  )
+  );
 }
 
 GifGrid.propTypes = {

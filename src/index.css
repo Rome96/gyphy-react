@@ -13,6 +13,11 @@ input {
   color: #30475e;
 }
 
+.title__category {
+  color: #145374;
+  font-size: 1.5rem;
+}
+
 .card-grid {
   display: flex;
   flex-direction: row;

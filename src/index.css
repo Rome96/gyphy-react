@@ -12,3 +12,29 @@ input {
   font-size: 1rem;
   color: #30475e;
 }
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  align-content: center;
+  /* align-items: center; */
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 10px 10px 0px;
+  overflow: hidden;
+}
+
+.card img {
+  max-height: 170px;
+}
+
+.card h4 {
+ text-align: center;
+}

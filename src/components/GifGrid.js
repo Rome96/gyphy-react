@@ -23,17 +23,17 @@ const GifGrid = ({category}) => {
     setImages(gifs);
   }
 
-  return (
-    <>
-      <h3>{category}</h3>
+  return <>
+    <h3>{category}</h3>
+    <div className='card-grid'>
         {images.map(img => (
           <GifGridItem
             key={img.id}
             {...img}
           />
         ))}
-    </>
-  );
+    </div>
+  </>
 }
 
 GifGrid.propTypes = {

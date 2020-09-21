@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const GifGridItem = props => {
   const { urlImg, title } = props;
   return (
-    <div>
+    <div className='card'>
       <h4>{title}</h4>
       <img src={urlImg} alt={title} />
     </div>

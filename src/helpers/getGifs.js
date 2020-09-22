@@ -1,4 +1,3 @@
-
 export const getGifs = async (category) => {
   const key = "fvs9AwDk1cJlHvKtIvF73Ar2ncHRisep";
   const limit = 5;

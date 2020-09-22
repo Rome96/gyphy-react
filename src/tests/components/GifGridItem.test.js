@@ -3,11 +3,37 @@ import { shallow } from 'enzyme';
 import '@testing-library/jest-dom';
 import GifGridItem from '../../components/GifGridItem';
 
-describe("Testing component <GifGridItem/>", () => {
-  test("return component GifGridItem/>", () => {
-    const urlImg =
-      "https://media4.giphy.com/media/jURBjTfNXLRKGzE042/giphy.gif?cid=42fdce0aa8mnyqbuz9c0ab1aksu9qf9vyogvabmdm6e2wx54&rid=giphy.gif";
-    const wrapper = shallow(<GifGridItem urlImg={urlImg}/>);
-    expect(wrapper).toMatchSnapshot()
+describe('Testing component <GifGridItem/>', () => {
+  const title = 'Gocku';
+  const urlImg = `https://localhost/algo.gif`;
+  let wrapper = shallow(<GifGridItem urlImg={urlImg} title={title} />);
+
+   // se ejectuta antes de las evaluaciones - similar a un ciclo de vida de react
+   beforeEach(() => {
+     wrapper = shallow(<GifGridItem urlImg={urlImg} title={title} />);
+   });
+
+  test('return component GifGridItem/>', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test("Must have a paragraph with the title", () => {
+    const p = wrapper.find('h4').text().trim();
+    expect(p).toBe(title);
+  });
+
+  test('Must have the image equal to the url and alt of the props', () => {
+    const img = wrapper.find('img');
+    const url = img.prop('src');
+    const alt = img.prop('alt');
+
+    expect(url).toBe(urlImg);
+    expect(alt).toBe(title);
+  });
+
+  test("Must have animate__backInLeft", () => {
+    const div = wrapper.find('div')
+    const classCss = div.prop("className").trim().includes('animate__backInLeft');
+    expect(classCss).toBe(true)
   });
 });

@@ -4,9 +4,12 @@ exports[`Testing component <GifGridItem/> return component GifGridItem/> 1`] = `
 <div
   className="card animate__animated animate__backInLeft"
 >
-  <h4 />
+  <h4>
+    Gocku
+  </h4>
   <img
-    src="https://media4.giphy.com/media/jURBjTfNXLRKGzE042/giphy.gif?cid=42fdce0aa8mnyqbuz9c0ab1aksu9qf9vyogvabmdm6e2wx54&rid=giphy.gif"
+    alt="Gocku"
+    src="https://localhost/algo.gif"
   />
 </div>
 `;

@@ -36,4 +36,5 @@ describe('Testing component <GifGridItem/>', () => {
     const classCss = div.prop("className").trim().includes('animate__backInLeft');
     expect(classCss).toBe(true)
   });
+  
 });

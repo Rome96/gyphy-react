@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing in components <AddCategory/> Render component <AddCategory /> 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    placeholder="Search..."
+    type="value"
+    value=""
+  />
+</form>
+`;

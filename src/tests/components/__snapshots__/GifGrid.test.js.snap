@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing in component <GifGrid/> Render component  <GifGrid/> 1`] = `
+<Fragment>
+  <p
+    className="title__category animate__animated animate__backInDown animate__delay-1s"
+  >
+    Goku
+  </p>
+  <p
+    className="animate__animated animate__flash"
+  >
+    Cargando...
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;

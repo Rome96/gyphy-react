@@ -1,26 +1,31 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import '@testing-library/jest-dom';
-import { shallow } from 'enzyme'
-import AddCategory from '../../components/AddCategory'
+import AddCategory from '../../components/AddCategory';
 
 describe("Testing in components <AddCategory/>", () => {
-  const setCategories = () => {};
 
+  const setCategories = jest.fn();  
   let wrapper = shallow(<AddCategory setCategories={setCategories} />);
 
   beforeEach(() => {
+    jest.clearAllMocks(); // limpiar cualquier simulacion
     wrapper = shallow(<AddCategory setCategories={setCategories} />);
   });
   
   test("Render component <AddCategory />", () => {
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot();
   });
 
   test('onChange input search', () => {
-    const input = wrapper.find('input')
-    const value = 'Hello World'
-    input.simulate('change', { target: { value } })
+    const value = 'Hello World';
+    const input = wrapper.find('input');
+    input.simulate('change', { target: { value } });
+  });
 
+  test("You should not send the information with Onsubmit", () => {
+    wrapper.find("form").simulate("submit", { preventDefault() {} });
+    expect(setCategories).not.toHaveBeenCalled();
   });
 
 });

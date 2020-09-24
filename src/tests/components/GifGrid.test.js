@@ -10,10 +10,12 @@ describe('Testing in component <GifGrid/>', () => {
   const category = 'Goku';
 
   test('Render component  <GifGrid/>', () => {
+
     useFetchGifs.mockReturnValue({
       data: [],
       loading: true,
     });
+
     const wrapper = shallow(<GifGrid category={category} />);
     expect(wrapper).toMatchSnapshot()
   });
@@ -29,8 +31,14 @@ describe('Testing in component <GifGrid/>', () => {
       data: gifs,
       loading: false,
     });
+
     const wrapper = shallow(<GifGrid category={category} />);
+    const p = wrapper.find('p').exists();
+    const GifGridItem = wrapper.find("GifGridItem").length;
+    expect(p).toBe(false);
     expect(wrapper).toMatchSnapshot();
+    expect(GifGridItem).toBe(gifs.length);
+
   });
 
 });

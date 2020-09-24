@@ -2,11 +2,11 @@
 
 exports[`Testing in component <GifGrid/> Render <GifGridItem/> when images are loaded of hook useFetchGifs 1`] = `
 <Fragment>
-  <p
+  <h3
     className="title__category animate__animated animate__backInDown animate__delay-1s"
   >
     Goku
-  </p>
+  </h3>
   <div
     className="card-grid"
   >
@@ -22,11 +22,11 @@ exports[`Testing in component <GifGrid/> Render <GifGridItem/> when images are l
 
 exports[`Testing in component <GifGrid/> Render component  <GifGrid/> 1`] = `
 <Fragment>
-  <p
+  <h3
     className="title__category animate__animated animate__backInDown animate__delay-1s"
   >
     Goku
-  </p>
+  </h3>
   <p
     className="animate__animated animate__flash"
   >

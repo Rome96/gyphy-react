@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`testing component <GifExpertApp/> Render array of categories 1`] = `
+<Fragment>
+  <h2>
+    Gif Expert App
+  </h2>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol>
+    <GifGrid
+      category="Naruto"
+      key="0"
+    />
+    <GifGrid
+      category="Gokú"
+      key="1"
+    />
+  </ol>
+</Fragment>
+`;
+
 exports[`testing component <GifExpertApp/> return component <GifExpertApp/> 1`] = `
 <Fragment>
   <h2>
@@ -11,7 +33,7 @@ exports[`testing component <GifExpertApp/> return component <GifExpertApp/> 1`] 
   <hr />
   <ol>
     <GifGrid
-      category="Goku"
+      category="Naruto"
       key="0"
     />
   </ol>

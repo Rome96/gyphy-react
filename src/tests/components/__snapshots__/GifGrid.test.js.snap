@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Testing in component <GifGrid/> Render <GifGridItem/> when images are loaded of hook useFetchGifs 1`] = `
+<Fragment>
+  <p
+    className="title__category animate__animated animate__backInDown animate__delay-1s"
+  >
+    Goku
+  </p>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="1"
+      key="1"
+      title="Naruto"
+      urlImg="https://localhost/data/naruto.gif"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`Testing in component <GifGrid/> Render component  <GifGrid/> 1`] = `
 <Fragment>
   <p
